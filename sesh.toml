@@ -1,0 +1,41 @@
+#[default_session]
+#startup_command = "eza -al --group-directories-first --icons=auto"
+#
+#[[session]]
+#name = "htb"
+#
+#[[window]]
+#name = "ops"
+#
+#[[window]]
+#name = "dev"
+
+[[session]]
+name = "Dotfiles Workspace"
+path = "~/.config"
+startup_command = "nvim tmux/tmux.conf"
+
+[[session]]
+name = "Web App Development"
+path = "~/Projects/my-web-app"
+startup_command = "npm run dev"
+
+  [[session.window]]
+  name = "Editor"
+  path = "~/Projects/my-web-app"
+  command = "nvim"
+
+  [[session.window]]
+  name = "Server Logs"
+  path = "~/Projects/my-web-app"
+  command = "tail -f server.log"
+
+  [[session.window]]
+  name = "Git Shell"
+  path = "~/Projects/my-web-app"
+  command = "lazygit"
+
+[[session]]
+name = "Work Worktree"
+path = "~/Work/*"
+startup_command = "nvim"
